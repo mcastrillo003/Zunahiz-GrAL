@@ -1,0 +1,156 @@
+<div class="ui vertical divider" id="baliabideak">
+  <p id="eginbeharrak-text">EGINBEHARRAK</p>
+</div>
+
+<div id="right-box" *ngIf="!deleted">
+<div id="calendar-box">
+    <a id="year-text">{{urtea}}</a>
+      <button id="month-arrow-left" class="ui icon button" (click)="prevMonth()">
+        <i id="month-arrow-icon" class="angle double very big left icon"></i>
+      </button>
+
+        <a id="month-text" *ngIf="hilabetea==01">URTARRILA</a>
+        <a id="month-text" *ngIf="hilabetea==02">OTSAILA</a>
+        <a id="month-text" *ngIf="hilabetea==03">MARTXOA</a>
+        <a id="month-text" *ngIf="hilabetea==04">APIRILA</a>
+        <a id="month-text" *ngIf="hilabetea==05">MAIATZA</a>
+        <a id="month-text" *ngIf="hilabetea==06">EKAINA</a>
+        <a id="month-text" *ngIf="hilabetea==07">UZTAILA</a>
+        <a id="month-text" *ngIf="hilabetea==08">ABUZTUA</a>
+        <a id="month-text" *ngIf="hilabetea==09">IRAILA</a>
+        <a id="month-text" *ngIf="hilabetea==10">URRIA</a>
+        <a id="month-text" *ngIf="hilabetea==11">AZAROA</a>
+        <a id="month-text" *ngIf="hilabetea==12">ABENDUA</a>
+
+      <button id="month-arrow-right" class="ui icon button" (click)="nextMonth()">
+        <i class="angle double very big right icon"></i>
+      </button>
+      <ul id="calendar-list-box" >
+            <div id="osorik"*ngFor="let c of calendar">
+              <p id="data">{{c.noizkoEguna}}</p><p id="zer" [routerLink]="['/duty',c._id]">{{c.izenburua}}</p>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<div id="user-prof-box">
+  <div class="item">
+    <div class="content2">
+      <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+      <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+    </div>
+  </div>
+  <i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+
+  <button id="aukerak" *ngIf="isAdmin" class="ui right labeled icon button" (click)="aukeraGaitu()">
+    <i class="right cog icon"></i>Aukerak
+  </button>
+  <div id="irakasle" *ngIf="isAdmin && aukeraGaituta" class="ui segments">
+    <div id="auk" class="ui segment">
+      <p [routerLink]="['/students']" >Ikasleak</p>
+    </div>
+    <div id="auk" class="ui #4dffc3 segment">
+      <p [routerLink]="['/duties']" >Eginbeharrak</p>
+    </div>
+    <div id="auk3" class="ui #4dffc3 segment">
+      <p>Plataforma gida</p>
+    </div>
+  </div>
+</div>
+
+
+<div id="button-header">
+  <button id="create-publi-button" class="ui color1 button" [routerLink]="['/addDuty',type]">Sortu foro berria!</button>
+</div>
+
+<ul id="publications-list">
+  <li id="publicationak" *ngFor="let p of publications">
+      <div id="info">
+        <img id="egilea" class="ui mini image" src="{{userArgazkiaUrl+p.sortzailea}}" [routerLink]="['/profile',p.sortzailea]">
+        <button id="editPubli" class="circular ui icon button" *ngIf="p.sortzailea==userMe._id" [routerLink]="['/editPublication',p._id,type]">
+          <i class="icon pencil alternate"></i>
+        </button>
+        <button id="deletePubli" class="circular ui icon button" *ngIf="p.sortzailea==userMe._id"[routerLink]="['/deletePublication',p._id,type]">
+          <i class="icon trash"></i>
+        </button>
+        <p id="izenburua">{{p.izenburua}}</p>
+        <p id="azalpena">{{p.azalpena}}</p>
+        <a id="openFile" *ngIf="p.file.title"target="_blank"[routerLink]="['/file',p.file._id]">Fitxategia: <p id="fitxategia">{{p.file.title}}</p></a>
+        <a id="openfile" *ngIf="!p.file.title">Ez dago fitxategirik argitalpen honetan<p id="fitxategia"></p></a>
+      </div>
+      <div id="publi">
+        <img id="publication-semaphore" class="ui tiny image" src="{{urlSemaphore+p.semaforoak[0].image}}">
+        <p id="publication-description">{{p.semaforoak[0].description}}</p>
+      </div>
+
+
+    <select id="aukeratuPubli" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="kolorea" ngValue="semaforoa">
+        <option *ngFor=" let k of koloreak" [ngValue]="k.name">{{k.name}}</option>
+      </select>
+  <form>
+      <button id="aldatuPubli" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoaAldatzen(0,p.semaforoak[0]._id)">Aldatu</button>
+  </form>
+    <textarea id="semDescription" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="description"></textarea>
+    <form>
+    <button id="semDesAldatzen" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoDesAldatu(0,p.semaforoak[0]._id)">Aldatu</button>
+  </form>
+
+
+      <div id="com">
+        <img id="comment-semaphore" class="ui tiny image" src="{{urlSemaphore+p.semaforoak[1].image}}">
+        <p id="comment-description">{{p.semaforoak[1].description}}</p>
+      </div>
+
+      <select id="aukeratuComment" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="kolorea2">
+          <option *ngFor=" let k of koloreak" [ngValue]="k.name">{{k.name}}</option>
+        </select>
+    <form>
+        <button id="aldatuComment" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoaAldatzen(1,p.semaforoak[1]._id)">Aldatu</button>
+    </form>
+    <textarea id="comDescription" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="description2"></textarea>
+    <button id="comDesAldatzen" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoDesAldatu(1,p.semaforoak[1]._id)">Aldatu</button>
+
+      <button id="aldaketa" class="circular ui icon button" *ngIf="isAdmin"(click)="aldaketaGaitu()">
+        <i class="icon settings"></i>
+      </button>
+
+
+
+      <div id="iruzkin-box">
+      <h3 id="iruzkinTitle" class="ui dividing header">Iruzkinak</h3>
+      <div id="gustuko" *ngIf="!gustukoDut" class="ui label">
+        <i class="thumbs up outline icon" (click)="gustuko(p)"></i>{{p.gustuko.length}}
+      </div>
+      <div id="iruzkinak" *ngIf="p.iruzkinak!=false">
+      <li class="ui comments"*ngFor="let i of p.iruzkinak">
+        <div class="comment" id="iruzkina" oncuechange="egilea()">
+          <a class="avatar">
+            <img src="{{userArgazkiaUrl+i.user}}" [routerLink]="['/profile',i.user]">
+          </a>
+          <div class="content">
+            <a class="author">{{i.user.firstName}}</a>
+            <div class="text">{{i.content}}</div>
+
+            <div class="actions">
+              <a class="reply" *ngIf="userMe._id==i.user" (click)="deleteComment(i._id)" style="color:red">Ezabatu</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+      <p *ngIf="p.iruzkinak==false">Argitalpen honek ez du iruzkinik</p>
+      <div class="ui action input" id="iruzkinaGehitzen">
+        <input type="text" name="content" placeholder="Iruzkina idatzi..." #content="ngModel" [(ngModel)]="comment.content">
+        <button class="ui button" (click)="addComment(p._id)">Gehitu</button>
+      </div>
+
+  </li>
+</ul>
+
+<p id="ikasleak-text">IKASLEAK</p>
+<ul id="ikasleak-list">
+  <li id="eginbeharra" *ngFor="let u of users">
+        <p id="title" [routerLink]="['/profile',u._id]" >{{u.firstName}} {{u.lastName}} {{u.lastName2}}</p>
+  </li>
+</ul>

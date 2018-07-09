@@ -1,0 +1,502 @@
+/*kontu kudeaketa*/
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 21%;
+    right: 43px;
+    width: 80px;
+    text-align: center;
+}
+
+#user-prof-box{
+  margin-left: 1195px;
+    margin-top: -25px;
+}
+
+#bilaketa{
+  position: absolute;
+    top: 244px;
+    left: 520px;
+    width: 290px;
+}
+
+#ikasle-list{
+  position: absolute;
+    top: 282px;
+    left: 522px;
+    width: 287px;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+#findIcon{
+  cursor: pointer;
+top: 10px;
+position: absolute;
+left: 11px;
+
+}
+
+#ikaslerikEz{
+
+}
+
+#ikasle-izenak{
+  margin-bottom: 6px;
+}
+
+#izenak{
+  margin-left: 28px;
+  color: #0066cc;
+}
+
+#egilea{
+  position: absolute;
+    top: -10px;
+    left: -30px;
+    cursor: pointer;
+}
+
+#editPubli{
+  position: absolute;
+top: -15px;
+left: 516px;
+}
+
+#deletePubli{
+  position: absolute;
+    top: 20px;
+    left: 516px;
+    color: red;
+}
+.ui.mini.image, .ui.mini.images .image, .ui.mini.images img, .ui.mini.images svg {
+    width: 55px;
+    height: auto;
+    font-size: .78571429rem;
+}
+
+#aukerak{
+  position: absolute;
+    top: 175px;
+    left: 1210px;
+    background-color: #004B8D;
+   color:#4dffc3;
+
+}
+
+.ui.segments {
+  flex-direction: column;
+  position: relative;
+  margin: 1rem 0;
+  border: 2px solid #4dffc3;
+  box-shadow: 0 1px 2px 0 #4dffc3;
+  border-radius: 0.285714rem;
+}
+
+.ui.segments:not(.horizontal)>.segment:first-child {
+    border-top: none;
+    margin-top: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    top: 0;
+    border-radius: -0.714286rem .28571429rem 0 0;
+}
+
+#auk{
+  height: 40px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#auk3{
+  height: 57px;
+  cursor:pointer;
+}
+
+#irakasle{
+  position: absolute;
+    top: 190px;
+    width: 114px;
+    left: 1229px;
+    text-align: center;
+    z-index: 1;
+}
+
+
+#baliabideak{
+  position: absolute;
+top: 795px;
+left: 315px;
+height: 480px;
+}
+
+#eginbeharrak-text{
+  margin-top: -480px;
+    position: absolute;
+    margin-left: -231px;
+    text-decoration: underline;
+    font-size: 17px;
+    z-index: 0;
+}
+#baliabideak-text{
+  position: absolute;
+  text-decoration: underline;
+  font-size: 17px;
+  text-decoration: underline;
+  top: 313px;
+  left: 1210px;
+  font-stretch: ultra-expanded;
+  font-weight: bold;
+}
+
+#eginbeharrak-list{
+  position: absolute;
+    top: 355px;
+    font-size: 20px;
+}
+
+#goikoMuga, #behekoMuga{
+  border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      width: 91px;
+      margin-left: -9px;
+}
+
+#behekoMuga{
+  margin-top: -18px;
+}
+
+#foroaAll{
+  position: absolute;
+  left: 1235px;
+  top: 565px;
+  font-size: 21px;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+#title{
+  cursor: pointer;
+      margin-bottom: 5px;
+      color: #0066cc;
+}
+
+#info{
+  margin-left: 15px;
+}
+
+#chat{
+  height: 95px;
+position: absolute;
+left: 1223px;
+cursor: pointer;
+top: 700px;
+
+}
+
+#chatAll{
+  position: absolute;
+  left: 1235px;
+  top: 810px;
+  font-size: 21px;
+  font-family: cursive;
+  cursor: pointer;
+
+}
+
+#chat-text{
+  margin-left: 7px;
+}
+
+#izenburua{
+  text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+
+      /*probako borobil urdina*/
+      background-color: #b3d9ff;
+      border-color: #0066cc;
+      border-radius: 15px;
+      height: auto;
+      margin-top: 3.5px;
+      margin-right: 15px;
+      height: 38px;
+}
+
+#azalpena{
+  font-family: monospace;
+font-size: 11px;
+overflow: auto;
+/*height: 40px;*/
+height: 44px;
+}
+
+.ui.dividing.header {
+    margin-left: 15px;
+}
+
+#egin{
+  position: absolute;
+    top: 129px;
+}
+
+#eginIzen{
+  position: absolute;
+    margin-top: -20px;
+    margin-left: 84px;
+    color: white;
+    width: 448px;
+}
+
+#openFile{
+    max-height: 30px;
+    top: -5px;
+    position: relative;
+}
+
+a{
+    color: #b3d9ff;
+    text-decoration: underline;
+}
+
+#fitxategia{
+  position: absolute;
+    margin-top: -20px;
+    margin-left: 70px;
+    color: white;
+    width: 450px;
+}
+
+#publications-list{
+  padding: 0px;
+    margin: 0px;
+    margin-top: 80px;
+    margin-left: 130px;
+        height: 1000px;
+        overflow: auto;
+        width: 1045px;
+}
+
+#publicationak{
+
+  list-style: none;
+      border: 1px solid #ddd;
+      width: 53%;
+      position: relative;
+      top: -110px;
+      left: 260px;
+      height: 149px;
+      margin-top: 195px;
+      margin-bottom: 270px;
+      border-radius: 15px;
+      background-color: #0066cc;
+      border-color: #0066cc;
+      z-index: 0;
+}
+
+#publication-semaphore{
+  margin-top: -35px;
+}
+
+#publication-description{
+  position: relative;
+  top: -57px;
+  left: 55px;
+  height: 80.5px;
+  width: 155px;
+  font-family: cursive;
+  font-size: 9px;
+  overflow: auto;
+}
+
+
+#comment-semaphore{
+    margin-top: -35px;
+}
+
+#comment-description{
+  position: relative;
+top: -65px;
+left: 55px;
+height: 90.5px;
+width: 155px;
+font-family: cursive;
+font-size: 9px;
+overflow: auto;
+}
+
+#semDescription{
+  position: absolute;
+    top: -10px;
+    left: 610px;
+    height: 93px;
+}
+
+#semDesAldatzen{
+  /*position: absolute;
+top: -293px;
+left: 655px;*/
+position: absolute;
+    top: 85px;
+    left: 655px;
+}
+
+#comDescription{
+  position: absolute;
+    top: 118px;
+    left: 610px;
+    height: 93px;
+}
+
+#comDesAldatzen{
+  /*position: absolute;
+  top: -167px;
+  left: 655px;*/
+  position: absolute;
+    top: 212px;
+    left: 655px;
+}
+
+#aukeratuPubli{
+  position: absolute;
+    top: 65px;
+    left: 550px;
+    width: 59px;
+}
+#aldatuPubli{
+  position: absolute;
+    top: 85px;
+    left: 551px;
+    width: 59px;
+}
+
+#aukeratuComment{
+  position: absolute;
+    top: 191px;
+    left: 550px;
+    width: 59px;
+}
+
+#aldatuComment{
+  position: absolute;
+    top: 211px;
+    left: 550px;
+    width: 59px;
+}
+
+#aldaketa{
+  position: absolute;
+    top: 100px;
+    left: 520px;
+}
+
+#publi{
+  position: absolute;
+    margin-top: -100px;
+    margin-left: 555px;
+}
+
+#com{
+  position: absolute;
+    margin-top: 27px;
+    margin-left: 555px;
+}
+
+#iruzkinaGehitzen{
+  margin-top: 10px;
+    width: 550px;
+}
+#iruzkina{
+  margin-left: 15px;
+}
+
+#iruzkinak{
+  overflow: auto;
+    height: 120px;
+}
+#iruzkin-box{
+  background-color: #b3d9ff;
+    border-color: #b3d9ff;
+    margin-top: 21px;
+    border-radius: 15px;
+}
+
+#iruzkinTitle{
+      height: 28px;
+}
+
+#create-publi-button{
+  position: absolute;
+  top: 245px;
+  left: 315px;
+  background-color: #4dffc3;
+}
+
+#gustuko{
+  position: absolute;
+    top: 148px;
+    left: 100px;
+    background-color: #b3d9ff;
+    cursor: pointer;
+}
+
+#gustuko2{
+  position: absolute;
+    top: 138px;
+    left: 100px;
+    background-color: #b3d9ff;
+    cursor: pointer;
+    color:red;
+}
+.ui.tiny.image, .ui.tiny.images .image, .ui.tiny.images img, .ui.tiny.images svg {
+    width: 80px;
+    height: auto;
+    font-size: .85714286rem;
+    height: 60.31px;
+    width: 51.44px;
+}
+
+.profila{
+  margin-left: 1199px;
+  margin-top: 8px;
+
+}
+
+#foroa{
+  height: 95px;
+position: absolute;
+left: 1215px;
+top: 450px;
+cursor: pointer;
+}
+
+/*chatSemaphoe*/
+#chat-semaphore{
+    position: absolute;
+    top: 780px;
+    left: 1200px;
+    width: 25px;
+    height: 30px;
+}

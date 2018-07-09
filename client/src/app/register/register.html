@@ -1,0 +1,61 @@
+<div id="profileraSarrera">
+<i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+<div id="user-prof-box" >
+    <div class="item">
+      <div class="content">
+        <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+        <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+      </div>
+    </div>
+</div>
+</div>
+
+<div id="user-filter-box">
+
+  <div id="Title-user">Sartu ikaslearen datuak:</div><br><br><br>
+
+  <form name="formPlan" #formPlan="ngForm" (ngSubmit)="onSubmit()">
+
+    <div id="label-user">Erabiltzailea:</div>
+    <div class="ui input">
+      <input id="erabiltzailea" type="text" name="erabiltzailea" placeholder='Sartu erabiltzaile izena...' autocomplete="off" size="40"  #erabiltzailea="ngModel" [(ngModel)]="credentials.username" required>
+    </div>
+      <br><span id="alert-create-plan" *ngIf="erabiltzailea.touched && !erabiltzailea.valid"><br>Erabiltzaile izena sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <div id="izena">Izena:</div>
+    <div class="ui input">
+      <input type="text" name="izena" placeholder='Sartu izena...' autocomplete="off" size="40"  #izena="ngModel" [(ngModel)]="credentials.firstName" required>
+    </div>
+      <br><span id="alert-create-plan" *ngIf="izena.touched && !izena.valid"><br>Izena sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <div id="abizena">1.abizena:</div>
+    <div class="ui input">
+      <input type="text" name="abizena1" placeholder="Sartu abizena..." autocomplete="off" size="40" #abizena1="ngModel" [(ngModel)]="credentials.lastName" required>
+    </div>
+      <span id="alert-create-plan" *ngIf="abizena1.touched && !abizena1.valid"><br>Abizena sartzea derrigorrezkoa da!</span>
+    <br><br>
+
+    <div id="label-user">2.abizena:</div>
+    <div class="ui input">
+      <input type="text" name="abizena2" placeholder='Sartu abizena...' autocomplete="off" #abizena2="ngModel"  size="40" [(ngModel)]="credentials.lastName2" required>
+    </div>
+      <span id="alert-create-plan" *ngIf="abizena2.touched && !abizena1.valid"><br>Abizena sartzea derrigorrezkoa da!</span>
+    <br><br>
+
+
+    <div id="label-user">Pasahitza:</div>
+    <div class="ui input">
+      <input type="password" name="password" placeholder='Sartu pasahitza...' autocomplete="off" #password="ngModel" size="40" [(ngModel)]="credentials.password" required>
+    </div>
+      <span id="alert-create-plan" *ngIf="password.touched && !password.valid"><br>Pasahitza sartzea derrigorrezkoa da!</span>
+    <br><br>
+
+    <br>      <span id="alert-create-plan" *ngIf="noUser"><br>Jada badago kontu bat erabiltzaile izen horrekin. Saia zaitez beste batekin</span>
+    <br><br>
+
+
+    <button id="create-user" class="ui large color1 button" type="submit" [disabled]="formPlan.form.invalid">Sortu kontua</button>
+  </form>
+</div>

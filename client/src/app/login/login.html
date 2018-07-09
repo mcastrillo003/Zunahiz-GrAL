@@ -1,0 +1,22 @@
+<div id="user-filter-box">
+
+  <form name="formLogin" #formLogin="ngForm" (ngSubmit)="onSubmit()">
+    <div id="label-user">Erabiltzailea:</div>
+    <div class="ui input">
+      <input type="text" name="erabiltzailea" placeholder='Sartu erabiltzaile izena...' autocomplete="off" #erabiltzailea="ngModel" size="40" [(ngModel)]="cred.username" required>
+    </div>
+      <span id="alert-create-plan" *ngIf="erabiltzailea.touched && !erabiltzailea.valid"><br>Erabiltzailea sartzea derrigorrezkoa da!</span>
+    <br><br>
+
+    <div id="label-user">Pasahitza:</div>
+    <div class="ui input">
+      <input type="password" name="pass" placeholder='Sartu pasahitza...' autocomplete="off" #pass="ngModel" size="40" [(ngModel)]="cred.password" required>
+    </div>
+      <span id="alert-create-plan" *ngIf="pass.touched && !pass.valid"><br>Pasahitza sartzea derrigorrezkoa da!</span>
+<br>      <span id="alert-create-plan" *ngIf="noUser"><br>Ez dituzu datuak ondo sartu. Saia zaitez berriz</span>
+<br><br>
+
+    <button id="create-user-button" class="ui large color3 button" type="submit" [disabled]="formLogin.form.invalid">Sartu!</button>
+
+  </form>
+</div>

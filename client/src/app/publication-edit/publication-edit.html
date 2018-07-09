@@ -1,0 +1,132 @@
+<div id="user-prof-box">
+  <div class="item">
+    <div class="content2">
+      <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+      <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+    </div>
+  </div>
+  <i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+</div>
+
+
+<div id="firstStep" *ngIf="firstStep"class="ui steps">
+  <div class="active step">
+      <i class="edit icon"></i>
+      <div class="content">
+        <div class="title">Datuak</div>
+        <div class="description">Argitalpenaren datuak sartzen...</div>
+      </div>
+    </div>
+    <div class="disabled step">
+      <i class="upload icon"></i>
+      <div class="content">
+        <div class="title">Fitxategia</div>
+        <div class="description">Argitalpenaren fitxategia sartzen...</div>
+      </div>
+    </div>
+</div>
+
+<div id="secondStep" *ngIf="secondStep" class="ui steps">
+  <div class="step">
+    <i class="edit icon"></i>
+    <div class="content">
+      <div class="title">Datuak</div>
+      <div class="description">Argitalpenaren datuak sartzen...</div>
+    </div>
+  </div>
+  <div class="active step">
+    <i class="upload icon"></i>
+    <div class="content">
+      <div class="title">Fitxategia</div>
+      <div class="description">Argitalpenaren fitxategia sartzen...</div>
+    </div>
+  </div>
+</div>
+<!---->
+
+
+<div id="user-filter-box" *ngIf="firstStep&&!isEginbeharra">
+
+  <div id="Title-user">Sartu argitalpenaren datuak:</div><br><br><br>
+
+  <form name="formPlan" #formPlan="ngForm" (ngSubmit)="onSubmit()">
+
+    <div id="izenburua">Izenburua:</div>
+    <div class="ui input">
+      <input id="izenburua-text" type="text" name="izenburua" placeholder='Sartu izenburua...' autocomplete="off" size="110"  #izenburua="ngModel" [(ngModel)]="publication.izenburua">
+    </div>
+      <br><span id="alert-create-publi" *ngIf="izenburua.touched && !izenburua.valid"><br>Izenburua sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <div id="azalpena">Azalpena:</div>
+    <div class="ui input">
+      <textarea id="azalpena-text" name="azalpena" placeholder='Sartu azalpena...' autocomplete="off" #azalpena="ngModel" [(ngModel)]="publication.azalpena" ></textarea>
+    </div>
+      <br><span id="alert-create-publi2" *ngIf="azalpena.touched && !azalpena.valid"><br>Azalpena sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <button id="create-publi-button" class="ui large color1 button" type="submit" [disabled]="formPlan.form.invalid">Aldatu datuak</button>
+    <button id="igaro" class="ui large color3 button" type="submit" (click)="hurrengoraIgaro()">Datuak ondo, fitxategia eguneratu</button>
+  </form>
+</div>
+
+
+<div id="user-filter-box" *ngIf="firstStep&&isEginbeharra">
+
+  <div id="Title-user">Sartu argitalpenaren datuak:</div><br><br><br>
+
+  <form name="formPlan" #formPlan="ngForm" (ngSubmit)="onSubmit()">
+
+    <div id="izenburua">Izenburua:</div>
+    <div class="ui input">
+      <input id="izenburua-text" type="text" name="izenburua" placeholder='Sartu izenburua...' autocomplete="off" size="110"  #izenburua="ngModel" [(ngModel)]="duty.izenburua" required>
+    </div>
+      <br><span id="alert-create-publi" *ngIf="izenburua.touched && !izenburua.valid"><br>Izenburua sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <div id="azalpena">Azalpena:</div>
+    <div class="ui input">
+      <textarea id="azalpena-text" name="azalpena" placeholder='Sartu azalpena...' autocomplete="off" #azalpena="ngModel" [(ngModel)]="duty.azalpena" required></textarea>
+    </div>
+      <br><span id="alert-create-publi2" *ngIf="azalpena.touched && !azalpena.valid"><br>Azalpena sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <div *ngIf="isEginbeharra">
+    <div id="data">Entregatze data:</div>
+      <div class="input-group">
+      <div class="ui input">
+        <input id="dataInput" class="form-control" name="data" style="float:none" placeholder="Aukeratu eguna" ngx-mydatepicker
+               [(ngModel)]="data" [options]="myOptions" #dp="ngx-mydatepicker" (dateChanged)="onDateChanged($event)"/>
+      </div>
+
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" (click)="dp.toggleCalendar()">
+                <i class="glyphicon glyphicon-calendar"></i>
+            </button>
+        </span>
+      </div>
+    </div>
+
+    <button id="create-publi-button" class="ui large color1 button" type="submit" [disabled]="formPlan.form.invalid">Aldatu datuak</button>
+    <button id="igaro" class="ui large color3 button" type="submit" (click)="hurrengoraIgaro()">Datuak ondo, fitxategia eguneratu</button>
+  </form>
+</div>
+
+<!--fitxategi kudeaketa-->
+<form   id="file" name="formFile" *ngIf="secondStep" #formFile="ngForm" (ngSubmit)="onSubmitFile()">
+  <div>
+    <div id="izenburua2">Fitxategiaren izenburua:</div>
+    <div class="ui input">
+      <input id="izenburua-text2" type="text" name="izenburua" placeholder='Sartu fitxategiaren izenburua...' autocomplete="off" size="50"  #izenburua="ngModel" [(ngModel)]="fitxIzen" required>
+    </div>
+      <br><span id="alert-create-publi3" *ngIf="izenburua.touched && !izenburua.valid"><br>Izenburua sartzea derrigorrezkoa da!</span>
+    <br>
+
+    <input id="fileIgo" type="file"  placeholder="Fitxategia aukeratu..." (change)="fileChangeEvent($event)" (click)="AldaketaGaitu()"/>
+    <button class="ui button" id="fileAldaketa" onclick="document.getElementById('fileIgo').click();" [disabled]="formFile.form.invalid">Fitxategia igo</button>
+    <!--<button id="amaitu" class="ui large color3 button" *ngIf="argitalpena"[routerLink]="['/main-page']">Fitxategia ondo, Amaitu</button>-->
+    <button id="amaitu" class="ui large color3 button"  (click)="amaitu()">Fitxategia ondo, Amaitu</button>
+    <input id="aldatuBotoia" class="positive ui button" *ngIf="aldaketaGaituta" type="submit" value="Fitxategia igo" [disabled]="!formFile.form.valid"/>
+  </div>
+
+</form>

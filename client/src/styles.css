@@ -1,0 +1,25 @@
+#bodyIndex{
+  background:  #f2f2f2;
+  height: 800px;
+}
+footer{
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #004B8D;
+    margin-bottom: -736px;
+}
+
+#text-footer{
+  color:white;
+  margin-left: 21px;
+}
+#harremanetarako{
+  color: #4da6ff;
+}
+
+#mailIcon{
+  margin-left: 18px;
+
+}

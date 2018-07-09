@@ -1,0 +1,256 @@
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#user-prof-box{
+  margin-top: -80px;
+  float: right;
+  width: 300px;
+  list-style: none;
+  border-radius: 10%;
+  margin-right: -121px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+float: left;
+position: absolute;
+cursor: pointer;
+top: 145px;
+right: 60px;
+}
+
+#sortu{
+  position: absolute;
+  top: 250px;
+  left: 765px;
+  background-color: #b3d9ff;
+}
+
+#students-list{
+  position: absolute;
+  list-style: none;
+  height: 500px;
+  overflow: auto;
+  top: 290px;
+  left: 20px;
+  width: 534.5px;
+}
+
+#ikaslea{
+  cursor: pointer;
+
+}
+
+#fitx{
+  position: absolute;
+    top: 304px;
+    left: 600px;
+}
+.ui.card, .ui.cards>.card {
+    max-width: 100%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 450px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    transition: box-shadow .1s ease,transform .1s ease;
+    z-index: '';
+}
+
+#ezabatu{
+  margin-left: 240px;
+}
+
+/*eginbeharra*/
+#egilea{
+  position: absolute;
+    top: -10px;
+    left: -30px;
+    cursor: pointer;
+}
+
+#editPubli{
+  position: absolute;
+top: -15px;
+left: 516px;
+}
+
+#deletePubli{
+  position: absolute;
+    top: 20px;
+    left: 516px;
+    color: red;
+}
+#info{
+  margin-left: 15px;
+}
+
+#izenburua{
+  text-align: center;
+      text-decoration: underline;
+      text-transform: uppercase;
+
+      /*probako borobil urdina*/
+      background-color: #b3d9ff;
+      border-color: #0066cc;
+      border-radius: 15px;
+      height: auto;
+      margin-top: 3.5px;
+      margin-right: 15px;
+      height: 38px;
+}
+
+#azalpena{
+  font-family: monospace;
+font-size: 11px;
+overflow: auto;
+/*height: 40px;*/
+height: 44px;
+}
+
+#create{
+  background-color: orange;
+position: absolute;
+top: 137px;
+left: 356px;
+}
+
+.ui.dividing.header {
+    margin-left: 15px;
+}
+
+#openFile{
+    max-height: 30px;
+    top: -5px;
+    position: relative;
+}
+
+a{
+    color: #b3d9ff;
+    text-decoration: underline;
+}
+
+#fitxategia{
+  position: absolute;
+    margin-top: -20px;
+    margin-left: 70px;
+    color: white;
+    width: 450px;
+}
+
+#noizkoData{
+  position: absolute;
+  top: 107px;
+  left: 438px;
+  color:orange;
+}
+
+#noizko-text{
+  position: absolute;
+  top: 107px;
+  left: 389px;
+  color: white;
+}
+
+#eginbeharra{
+
+  list-style: none;
+  border: 1px solid #ddd;
+  width: 40%;
+  position: relative;
+  top: -85px;
+  left: 600px;
+  height: 138px;
+  margin-top: 195px;
+  margin-bottom: 270px;
+  border-radius: 15px;
+  background-color: #0066cc;
+  border-color: #0066cc;
+}
+
+#publication-semaphore{
+  margin-top: -35px;
+    height: 70px;
+    width: 60px;
+}
+
+#publication-description{
+  position: relative;
+  top: -65px;
+  left: 65px;
+  height: 133px;
+  width: 121px;
+  font-family: cursive;
+  font-size: 9px;
+  overflow: auto;
+}
+
+#publi{
+  position: absolute;
+    margin-top: -100px;
+    margin-left: 555px;
+}
+#aldaketa{
+  position: absolute;
+    top: 455px;
+    left: 1115px;
+}
+
+#semDescription{
+  position: absolute;
+    top: 2px;
+    left: 618px;
+    height: 93px;
+    height: 133px;
+    width: 121px;
+}
+
+#semDesAldatzen{
+  position: absolute;
+    top: 150px;
+    left: 647px;
+}
+
+#response-list{
+  list-style: none;
+  margin-top: 25px;
+}
+
+#izena{
+  cursor: pointer;
+}
+
+#aukeratuPubli{
+  position: absolute;
+    top: 115px;
+    left: 550px;
+    width: 59px;
+}
+#aldatuPubli{
+  position: absolute;
+  top: 150px;
+    left: 550px;
+    width: 59px;
+}

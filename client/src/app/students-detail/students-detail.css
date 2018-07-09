@@ -1,0 +1,118 @@
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#user-prof-box{
+  margin-top: -80px;
+  float: right;
+  width: 300px;
+  list-style: none;
+  border-radius: 10%;
+  margin-right: -121px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+float: left;
+position: absolute;
+cursor: pointer;
+top: 145px;
+right: 60px;
+}
+
+#sortu{
+  position: absolute;
+    margin-top: 10px;
+    margin-left: 655px;
+    background-color: #b3d9ff;
+}
+
+#students-list{
+  position: absolute;
+  list-style: none;
+  height: 500px;
+  overflow: auto;
+  top: 290px;
+  left: 20px;
+  width: 534.5px;
+}
+
+#ikaslea{
+  cursor: pointer;
+
+}
+
+#estatistika{
+margin-top: 680px;
+top: px;
+margin-left: 601px;
+}
+.izenburua{
+  text-align: center;
+}
+.gorria{
+  color:red;
+  text-align: center;
+}
+.horia{
+  color:orange;
+  text-align: center;
+}
+.berdea{
+  color:green;
+  text-align: center;
+}
+.grisa{
+  color:grey;
+  text-align: center;
+}
+#fitx{
+  position: absolute;
+    top: 304px;
+    left: 600px;
+    max-height: 575px;
+}
+.ui.card, .ui.cards>.card {
+    max-width: 100%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 450px;
+    min-height: 0;
+    background: #fff;
+    padding: 0;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    transition: box-shadow .1s ease,transform .1s ease;
+    z-index: '';
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    max-width: 450px;
+    max-height: 450px;
+}
+
+#ezabatu{
+  margin-left: 240px;
+}

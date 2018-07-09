@@ -1,0 +1,157 @@
+body{
+  height: 1700px;
+}
+
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+float: left;
+position: absolute;
+cursor: pointer;
+top: 145px;
+right: 60px;
+}
+
+#user-prof-box{
+  margin-top: -25px;
+  float: right;
+  width: 300px;
+  list-style: none;
+  border-radius: 10%;
+}
+
+
+#user-portada{
+  top: 25px;
+max-height: 300px;
+width: fit-content;
+height: auto;
+}
+#user-photo{
+  max-width: 400px;
+    left: -15px;
+    max-height: 200px;
+    left: -125px;
+    top: 100px;
+}
+
+
+#user-view-box{
+  margin-left:200px;
+  float:left;
+  width: 280px;
+}
+#user-upper-box{
+  width: 100%;
+  height:480px;
+  margin-top: 85px;
+}
+#user-plan-box{
+  width: 85%;
+  margin: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 500px
+}
+
+#user-param-box{
+  float: right;
+      width: 50%;
+      margin-right: 75px;
+}
+#label-user{
+  margin: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 120%;
+  color: #7b7f76;
+}
+
+
+
+#alert-create-plan{
+  color: #dc9a9a;
+  font-size: 105%;
+}
+
+#create-user-button{
+  margin-left: 75px;
+    margin-bottom: 35px;
+    /*background: #666666;*/
+    margin-top: 27px;
+}
+
+#portadaBerriaIgo{ /*file input botoia*/
+  transform: scale(0.2,1);
+    position: relative;
+    top: 45px;
+    left: 525px;
+}
+
+
+#portadaAldaketa{/*file input gainean dagoen botoi politagoa*/
+  position: absolute;
+      top: 570px;
+      left: 610px;
+
+}
+#aldatuBotoia{/*file igoera baieztatzeko*/
+  margin-top: 34px;
+    position: absolute;
+    margin-left: 286px;
+    height: 41px;
+    width: 138px;
+
+}
+
+#argazkiBerriaIgo{ /*file input botoia*/
+  transform: scale(0.2,1);
+    position: absolute;
+    top: 905px;
+    left: 70px;
+}
+
+#argazkiAldaketa{/*file input gainean dagoen botoi politagoa*/
+  position: absolute;
+top: 900px;
+left: 140px;
+
+}
+#aldatuBotoia2{/*file igoera baieztatzeko*/
+  position: absolute;
+    margin-left: -340px;
+    margin-top: 344px;
+    height: 39px;
+    width: 140px;
+}
+
+#mezua{
+  width: 365px;
+    height: 50px;
+    margin-left: -28px;
+    margin-bottom: -35px;
+}
+#change-profile{
+  font-family: cursive;
+  color: black;
+  font-weight: 700;
+  margin-left: 62px;
+}

@@ -1,0 +1,164 @@
+/*kontu kudeaketa*/
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 21%;
+    right: 43px;
+    width: 80px;
+    text-align: center;
+}
+
+#user-prof-box{
+  margin-left: 1195px;
+    margin-top: -25px;
+}
+
+
+#firstStep, #secondStep{
+  position: absolute;
+    top: 255px;
+    left: 400px;
+}
+
+#user-filter-box{
+  position: absolute;
+    top: 400px;
+    left: 480px;
+}
+
+#Title-user{
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 1.14285714em;
+    font-weight: 700;
+    color: #4183c4;
+    text-align: center;
+}
+#igaro{
+  margin-top: 80px;
+  position: absolute;
+  width: 293px;
+  margin-left: 550px;
+  background-color: #b3d9ff;
+}
+
+#izenburua{
+  margin-top: -25px;
+}
+
+#izenburua-text, #azalpena-text{
+  width: 400px;
+    margin-top: 10px;
+}
+
+#izenburua2{
+  margin-top: 190px;
+    margin-left: 500px;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-size: 1.14285714em;
+    font-weight: 700;
+    color: #4183c4;
+    text-align: center;
+    width: 390px;
+}
+
+#izenburua-text2{
+  margin-left: 500px;
+    margin-top: 25px;
+}
+
+#azalpena-text{
+  margin: 0;
+  max-width: 100%;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+  text-align: left;
+  line-height: 1.21428571em;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  padding: .67857143em 1em;
+  background: #fff;
+  border: 1px solid rgba(34,36,38,.15);
+  color: black;
+  border-radius: .28571429rem;
+  transition: box-shadow .1s ease,border-color .1s ease;
+  box-shadow: none;
+}
+
+#azalpena{
+  margin-top: 25px;
+}
+
+#data{
+
+}
+
+#dataInput{
+  
+}
+
+#create-publi-button{
+  margin-left: 105px;
+  margin-top: 20px;
+}
+
+#fileIgo{
+  position: absolute;
+    top: 451px;
+    left: 530px;
+    transform: scale(0.2,1);
+    z-index: -1;
+}
+
+#fileAldaketa{
+  position: absolute;
+    top: 530px;
+    left: 630px;
+}
+
+#aldatuBotoia{
+  position: absolute;
+    top: 530px;
+    left: 622px;
+    height: 41px;
+    width: 145px;
+}
+
+#alert-create-publi{
+  position: absolute;
+  top: 110px;
+  color: red;
+}
+
+#alert-create-publi2{
+  position: absolute;
+  top: 225px;
+  color: red;
+}
+
+#alert-create-publi3{
+    position: absolute;
+    top: 470px;
+    color: red;
+    left: 500px;
+}

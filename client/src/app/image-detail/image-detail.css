@@ -1,0 +1,51 @@
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#user-prof-box{
+  margin-top: -80px;
+  float: right;
+  width: 300px;
+  list-style: none;
+  border-radius: 10%;
+  margin-right: -121px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+float: left;
+position: absolute;
+cursor: pointer;
+top: 145px;
+right: 60px;
+}
+
+
+#image{
+  width: 1000px;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: 180px;
+}
+
+#itzuli{
+  background-color: #66b3ff;
+color: white;
+position: absolute;
+margin-top: 570px;
+margin-left: -550px;
+}

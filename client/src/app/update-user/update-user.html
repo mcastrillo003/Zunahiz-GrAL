@@ -1,0 +1,105 @@
+
+<div id="user-prof-box">
+  <div class="item">
+    <div class="content">
+      <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+      <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+    </div>
+  </div>
+  <i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+</div>
+
+
+<div id="portada" >
+  <div id="user-view-portada">
+    <div class>
+      <img id="user-portada" class="ui large centered image" src="{{apiUrl+portadaUser.picture}}">
+    </div>
+  </div>
+</div>
+
+
+<form   id="aldatuPortada" #formImage="ngForm" (ngSubmit)="onSubmitPortada()">
+
+
+  <div>
+    <input id="portadaBerriaIgo" type="file"  placeholder="Irudia aukeratu..." (change)="fileChangeEvent($event)" (click)="AldaketaGaitu()"/>
+    <button class="ui button" id="portadaAldaketa" *ngIf="!aldaketaGaituta"onclick="document.getElementById('portadaBerriaIgo').click();">Portada aldatu</button>
+    <input id="aldatuBotoia" class="positive ui button" *ngIf="aldaketaGaituta" type="submit" value="Irudia aldatu" [disabled]="!formImage.form.valid"/>
+  </div>
+
+</form>
+
+
+
+
+<div id="argazkia" >
+
+  <div id="user-view-box">
+    <div class>
+      <img id="user-photo" class="ui medium image" src="{{apiUrl+image.picture}}" >
+    </div>
+  </div>
+</div>
+
+
+<form   id="aldatuArgazkia" #formImage2="ngForm" (ngSubmit)="onSubmitArgazkia()">
+
+
+  <div>
+    <input id="argazkiBerriaIgo" type="file"  placeholder="Irudia aukeratu..." (change)="fileChangeEvent($event)" (click)="AldaketaGaitu2()"/>
+    <button class="ui button" id="argazkiAldaketa" *ngIf="!aldaketaGaituta2" onclick="document.getElementById('argazkiBerriaIgo').click();">Argazkia aldatu</button>
+    <input id="aldatuBotoia2" class="positive ui button" *ngIf="aldaketaGaituta2" type="submit" value="Irudia aldatu" [disabled]="!formImage2.form.valid"/>
+  </div>
+
+</form>
+
+
+
+  <div id="header">
+    <div id="user-param-box">
+
+      <br><br><br><br><br>
+
+      <form name="formPlan" #formPlan="ngForm" (ngSubmit)="onSubmit()">
+
+        <div id="label-user">Izena:</div>
+        <div class="ui input">
+          <input type="text" name="izena" placeholder='Sartu izena...' size="40"  #izena="ngModel" [(ngModel)]="user.firstName" required>
+        </div>
+        <br><span id="alert-create-plan" *ngIf="izena.touched && !izena.valid"><br>Izena sartzea derrigorrezkoa da!</span>
+        <br>
+
+        <div id="label-user">1.abizena:</div>
+        <div class="ui input">
+          <input type="text" name="abizena1" placeholder="Sartu abizena..." size="40" #abizena1="ngModel" [(ngModel)]="user.lastName" required>
+        </div>
+        <span id="alert-create-plan" *ngIf="abizena1.touched && !abizena1.valid"><br>Abizena sartzea derrigorrezkoa da!</span>
+        <br><br>
+
+        <div id="label-user">2.abizena:</div>
+        <div class="ui input">
+          <input type="text" name="abizena2" placeholder='Sartu abizena...' #abizena2="ngModel"  size="40" [(ngModel)]="user.lastName2" required>
+        </div>
+        <span id="alert-create-plan" *ngIf="abizena2.touched && !abizena1.valid"><br>Abizena sartzea derrigorrezkoa da!</span>
+        <br><br>
+
+        <div id="label-user">Deskribapena:</div>
+        <div class="ui input">
+          <input type="text" name="herria" placeholder='Sartu zure herria...' #herria="ngModel" size="40" [(ngModel)]="user.description">
+        </div>
+        <!--<span id="alert-create-plan"><br>Deskribapena sartzea derrigorrezkoa da!</span>-->
+        <br><br>
+
+        <div id="mezua" class="ui icon message" *ngIf="datuakAldatuta">
+            <i class="inbox icon"></i>
+              <div class="content">
+                  <div class="header">
+                      Ondo gorde dira aldatutako datuak
+                  </div>
+            </div>
+        </div>
+
+        <br><br>
+        <button id="create-user-button" class="positive ui button" type="submit" [disabled]="formPlan.form.invalid">Gorde aldaketak</button>
+      </form>

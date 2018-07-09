@@ -1,0 +1,56 @@
+<div id="user-prof-box">
+  <div class="item">
+    <div class="content2">
+      <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+      <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+    </div>
+  </div>
+  <i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+</div>
+
+
+<div class="ui.basic.modal" *ngIf="!isEginbeharra" id="ezabatu">
+  <div class="ui icon header">
+    <i class="eraser icon" id="ezabagoma"></i>
+    <br><br>
+    <p id="oharra">Kaixo {{userMe.firstName}}! {{type}} ezabatzear zaude</p>
+  </div>
+  <div class="content">
+    <p id="galdera">Ziur zaude <strong>{{publication.izenburua}}</strong> {{type}} ezabatu nahi duzula?</p>
+  </div>
+  <div class="actions"id="botoiak">
+    <div class="ui red basic cancel inverted button" id="botoia1" (click)="Cancel()">
+      <i class="remove icon"></i>
+      EZ
+    </div>
+    <div class="ui green ok inverted button" id="botoia2" (click)="Delete()">
+      <i class="checkmark icon"></i>
+      BAI
+    </div>
+  </div>
+</div>
+
+<div class="ui.basic.modal" *ngIf="isEginbeharra" id="ezabatu">
+  <div class="ui icon header">
+    <i class="eraser icon" id="ezabagoma"></i>
+    <br><br>
+    <p id="oharra">Kaixo {{userMe.firstName}}! {{type}} ezabatzear zaude</p>
+  </div>
+  <div class="content">
+    <p id="galdera">Ziur zaude <strong>{{duty.izenburua}}</strong> {{type}} ezabatu nahi duzula?</p>
+  </div>
+  <div class="actions"id="botoiak">
+    <div class="ui red basic cancel inverted button" id="botoia1" (click)="Cancel()">
+      <i class="remove icon"></i>
+      EZ
+    </div>
+    <div class="ui green ok inverted button" id="botoia2" (click)="Delete()">
+      <i class="checkmark icon"></i>
+      BAI
+    </div>
+  </div>
+</div>
+
+<script>$('.ui.basic.modal')
+  .modal('show')
+;</script>

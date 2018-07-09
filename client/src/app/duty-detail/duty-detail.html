@@ -1,0 +1,122 @@
+<div id="profileraSarrera">
+<i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+<div id="user-prof-box" >
+    <div class="item">
+      <div class="content">
+        <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+        <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+      </div>
+    </div>
+</div>
+</div>
+
+<!--Eginbehar guztiak zerrendatuz-->
+<button id="sortu" class="ui large color3 button" *ngIf="isAdmin" [routerLink]="['/addDuty',type]">Eginbeharra sortu</button>
+<div id="eginbeharra" *ngIf="(bist&&(!existsParam))">
+  <div id="info">
+    <img id="egilea" class="ui mini image" src="{{userArgazkiaUrl+publiDisplay.sortzailea}}" [routerLink]="['/profile',publiDisplay.sortzailea]">
+    <button id="editPubli" class="circular ui icon button" *ngIf="publiDisplay.sortzailea==userMe._id" [routerLink]="['/editPublication',publiDisplay._id,type]">
+      <i class="icon pencil alternate"></i>
+    </button>
+    <!--<button id="deletePubli" class="circular ui icon button" *ngIf="publiDisplay.sortzailea==userMe._id"(click)="deletePublication(publiDisplay._id)">-->
+    <button id="deletePubli" class="circular ui icon button" *ngIf="publiDisplay.sortzailea==userMe._id" [routerLink]="['/deletePublication',publiDisplay._id,type]">
+      <i class="icon trash"></i>
+    </button>
+    <p id="izenburua">{{publiDisplay.izenburua}}</p>
+    <p id="azalpena">{{publiDisplay.azalpena}}</p>
+    <button id="create" *ngIf="!isAdmin"  class="ui large color3 button" [routerLink]="['/addDuty',typeToSend,publiDisplay._id]">Argitalpena sortu</button>
+    <a id="openFile" *ngIf="publiDisplay.file.title" target="_blank"[routerLink]="['/file',publiDisplay.file._id]">Fitxategia: <p id="fitxategia">{{publiDisplay.file.title}}</p></a>
+    <a id="openfile" *ngIf="!publiDisplay.file.title">Ez dago fitxategirik argitalpen honetan<p id="fitxategia"></p></a>
+    <p id="noizko-text">Noizko: </p><p id="noizkoData">{{publiDisplay.noizko}}</p>
+  </div>
+  <div id="publi">
+    <img id="publication-semaphore" class="ui tiny image" src="{{urlSemaphore+publiDisplay.semaforoak[0].image}}">
+    <p id="publication-description">{{publiDisplay.semaforoak[0].description}}</p>
+  </div>
+
+  <select id="aukeratuPubli" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="kolorea" ngValue="semaforoa">
+    <option *ngFor=" let k of koloreak" [ngValue]="k.name">{{k.name}}</option>
+  </select>
+  <form>
+      <button id="aldatuPubli" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoaAldatzen(0,publiDisplay.semaforoak[0]._id,publiDisplay._id)">Aldatu</button>
+  </form>
+      <textarea id="semDescription" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="description"></textarea>
+  <form>
+    <button id="semDesAldatzen" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoDesAldatu(0,publiDisplay.semaforoak[0]._id,publiDisplay._id)">Aldatu</button>
+  </form>
+
+  <ul *ngIf="isAdmin" id="response-list">
+    <p *ngIf="responses.length!=0" >ERANTZUN DUTENAK: </p>
+    <li id="response" *ngFor="let r of responses">
+      <div class="ui card" >
+          <div class="content">
+            <div id="izena" class="header" [routerLink]="['/profile',r.sortzailea._id]">{{r.sortzailea.firstName}} {{r.sortzailea.lastName}} {{r.sortzailea.lastName2}}</div>
+          </div>
+        </div>
+    </li>
+  </ul>
+</div>
+<button id="aldaketa" class="circular ui icon button" *ngIf="(isAdmin&&bist)"(click)="aldaketaGaitu()">
+  <i class="icon settings"></i>
+</button>
+
+<!--Parametrotik datorren eginbeharra ikusiz-->
+<div id="eginbeharra" *ngIf="(existsParam)">
+  <div id="info">
+    <img id="egilea" class="ui mini image" src="{{userArgazkiaUrl+publiComes.sortzailea}}" [routerLink]="['/profile',publiComes.sortzailea]">
+    <button id="editPubli" class="circular ui icon button" *ngIf="publiComes.sortzailea==userMe._id" [routerLink]="['/editPublication',publiComes._id,type]">
+      <i class="icon pencil alternate"></i>
+    </button>
+    <!--<button id="deletePubli" class="circular ui icon button" *ngIf="publiComes.sortzailea==userMe._id"(click)="deletePublication(publiComes._id)">-->
+    <button id="deletePubli" class="circular ui icon button" *ngIf="publiComes.sortzailea==userMe._id" [routerLink]="['/deletePublication',publiComes._id,type]">
+      <i class="icon trash"></i>
+    </button>
+    <p id="izenburua">{{publiComes.izenburua}}</p>
+    <p id="azalpena">{{publiComes.azalpena}}</p>
+    <button id="create" *ngIf="!isAdmin"  class="ui large color3 button" [routerLink]="['/addDuty',typeToSend,publiComes._id]">Argitalpena sortu</button>
+    <a id="openFile" *ngIf="publiComes.file.title" target="_blank"[routerLink]="['/file',publiComes.file._id]">Fitxategia: <p id="fitxategia">{{publiComes.file.title}}</p></a>
+    <a id="openfile" *ngIf="!publiComes.file.title">Ez dago fitxategirik argitalpen honetan<p id="fitxategia"></p></a>
+    <p id="noizko-text">Noizko: </p><p id="noizkoData">{{publiComes.noizko}}</p>
+  </div>
+  <div id="publi">
+    <img id="publication-semaphore" class="ui tiny image" src="{{urlSemaphore+publiComes.semaforoak[0].image}}">
+    <p id="publication-description">{{publiComes.semaforoak[0].description}}</p>
+  </div>
+
+  <select id="aukeratuPubli" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="kolorea" ngValue="semaforoa">
+    <option *ngFor=" let k of koloreak" [ngValue]="k.name">{{k.name}}</option>
+  </select>
+  <form>
+      <button id="aldatuPubli" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoaAldatzen(0,publiComes.semaforoak[0]._id,publiComes._id)">Aldatu</button>
+  </form>
+      <textarea id="semDescription" *ngIf="(isAdmin&&aldatu)" [(ngModel)]="description"></textarea>
+  <form>
+      <button id="semDesAldatzen" *ngIf="(isAdmin&&aldatu)" class="mini ui button" (click)="semaforoDesAldatu(0,publiComes.semaforoak[0]._id,publiComes._id)">Aldatu</button>
+  </form>
+  <ul *ngIf="isAdmin" id="response-list">
+    <p *ngIf="responses.length!=0" >ERANTZUN DUTENAK: </p>
+    <li id="response" *ngFor="let r of responses">
+      <div class="ui card" >
+          <div class="content">
+            <div id="izena" class="header" [routerLink]="['/profile',r.sortzailea._id]">{{r.sortzailea.firstName}} {{r.sortzailea.lastName}} {{r.sortzailea.lastName2}}</div>
+          </div>
+        </div>
+    </li>
+  </ul>
+</div>
+
+<button id="aldaketa" class="circular ui icon button" *ngIf="(isAdmin&&existsParam)"(click)="aldaketaGaitu()">
+  <i class="icon settings"></i>
+</button>
+
+
+
+<ul id="students-list">
+  <li id="ikaslea" (click)=bistaratu(s) *ngFor="let s of publications">
+    <div class="ui card" >
+        <div class="content">
+          <div class="header">{{s.izenburua}}</div>
+        </div>
+      </div>
+  </li>
+</ul>

@@ -1,0 +1,42 @@
+body{
+  background: #f2f2f2;
+}
+#bodyIndex{
+  background:  #f2f2f2;
+}
+/* HEADER  */
+header{
+  padding: 15px;
+  height: 233px;
+  background: #004B8D;
+  position: relative;
+}
+header h1{
+  margin-top: -9px;
+  padding-left: 100px;
+  margin-left: 15px;
+  font: oblique bold 451% cursive;
+  color: #F4F4F4;
+}
+header #logo{
+  width: 190px;
+  display: block;
+  float: left;
+  margin-top: 12px;
+  margin-left: 310px;
+}
+header .title-subtitle{
+  border-bottom: 2px solid #001a66;
+  border-top: 2px solid #001a66;
+  color: #7b7f76;
+  padding-top: 39px;
+  padding-bottom: 19px;
+  padding-left: 500px;
+}
+header p{
+  margin: 5px;
+  margin-top: 13px;
+  margin-left: 123px;
+  font-size: 216%;
+  color:#001a66;
+}

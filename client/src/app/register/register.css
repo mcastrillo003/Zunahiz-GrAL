@@ -1,0 +1,92 @@
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+float: left;
+position: absolute;
+cursor: pointer;
+top: 145px;
+right: 60px;
+}
+
+#user-prof-box{
+  margin-top: -25px;
+  float: right;
+  width: 300px;
+  list-style: none;
+  border-radius: 10%;
+}
+
+#Title-user{
+  padding-left: 100px;
+  margin-left: -140px;
+  margin-top: -15px;
+  position: absolute;
+  width: 500px;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+  font-size: 2.142857em;
+  font-weight: 1200;
+  color: #4183c4;
+  text-align: center;
+}
+#alert-create-plan{
+position: relative;
+top: 3px;
+color: red;
+}
+#erabiltzailea{
+  margin-bottom: -9px;
+}
+
+#izena{
+  margin-top:15px;
+  font-size: 120%;
+  color: #7b7f76;
+}
+
+#abizena{
+  font-size: 120%;
+    color: #7b7f76
+}
+
+#abizena1{
+  margin-top: 15px;
+  font-size: 120%;
+  color: #7b7f76;
+}
+
+#label-user{
+  margin: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 120%;
+  color: #7b7f76;
+}
+
+#create-user{
+  margin-left: 80px;
+  margin-top: -13px;
+}
+
+#user-filter-box{
+  position: absolute;
+  top: 305px;
+left: 525px;
+}

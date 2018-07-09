@@ -1,0 +1,15 @@
+<div id="profileraSarrera">
+<i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+<div id="user-prof-box" >
+    <div class="item">
+      <div class="content">
+        <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+        <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+      </div>
+    </div>
+</div>
+
+<div *ngIf="image">
+    <img id="image" class="imagen" src="{{apiUrl + imageZoom.picture}}" />
+    <a id="itzuli" class="ui right color3 button" [routerLink]="['/profile',imageZoom.user]">Itzuli profilera</a>
+</div>

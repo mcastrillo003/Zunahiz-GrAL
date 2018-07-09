@@ -1,0 +1,255 @@
+/*kontu kudeaketa*/
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 21%;
+    right: 43px;
+    width: 80px;
+    text-align: center;
+}
+
+#user-prof-box{
+  margin-left: 1195px;
+    margin-top: -25px;
+}
+
+/*bestelakoak*/
+
+.right{
+  text-align: right;
+}
+
+#goiburua{
+
+}
+
+#izena{
+  text-align: center;
+    font-size: 20px;
+    position: absolute;
+    width: 675px;
+    background-color: orange;
+    left: 325px;
+    top: 303px;
+    height: 33px;
+    border-radius: 16px;
+}
+
+#mezuak{
+  position: relative;
+    width: 780px;
+    margin-top: 40px;
+    margin-left: -25px;
+}
+
+#nor{
+  margin-top: -35px;
+    margin-left: 53px;
+}
+#irudia{
+
+}
+.ui.mini.image, .ui.mini.images .image, .ui.mini.images img, .ui.mini.images svg {
+    width: 50px;
+    height: auto;
+    font-size: .78571429rem;
+}
+
+#zer{
+  margin-top: -15px;
+    margin-left: 55px;
+
+}
+#idatzi{
+  width: 780px;
+    margin-left: 275px;
+    text-align: right;
+}
+
+#chat{
+      background-color: #ffdab3;
+  width:780px;
+  height: 550px;
+  margin-left: 275px;
+  margin-top: 70px;
+  border-radius: 60px;
+  overflow: auto;
+}
+
+#chat-box{
+  position: absolute;
+  top: 370px;
+  height: 465px;
+  overflow: auto;
+}
+
+#input{
+  width: 350px;
+    border-color: orange;
+    border-radius: 5px;
+    height: 36px;
+}
+
+
+#linkak{
+  position: absolute;
+  top:110px;
+}
+
+#foroa{
+  height: 95px;
+position: absolute;
+left: 1215px;
+top: 450px;
+cursor: pointer;
+}
+
+#goikoMuga, #behekoMuga{
+  border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      width: 91px;
+      margin-left: -9px;
+}
+
+#behekoMuga{
+  margin-top: -18px;
+}
+
+#foroaAll{
+  position: absolute;
+  left: 1235px;
+  top: 565px;
+  font-size: 21px;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+#foroOsoa{
+  position: absolute;
+  top: 15px;
+    left: -1155px;
+}
+#ple{
+  height: 95px;
+position: absolute;
+left: 1224px;
+top: 450px;
+cursor: pointer;
+}
+#pleAll{
+  position: absolute;
+  left: 1235px;
+  top: 565px;
+  font-size: 21px;
+  font-family: cursive;
+  cursor: pointer;
+}
+
+#pleOsoa{
+  position: absolute;
+  top: -215px;
+  left: -1155px;
+}
+
+#ple-text{
+  text-align: center;
+width: 85px;
+margin-left: -6px;
+color: black;
+}
+
+#goikoMuga2{
+  border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      width: 91px;
+      margin-left: -9px;
+      margin-top: 1px;
+}
+
+#behekoMuga2{
+  border-width: 1px;
+      border-color: black;
+      border-style: solid;
+      width: 91px;
+      margin-left: -9px;
+      margin-top: 3px;
+}
+
+/*semaforoa*/
+#publi{
+  position: absolute;
+    margin-top: -100px;
+    margin-left: 555px;
+}
+#aldaketa{
+  position: absolute;
+    top: 450px;
+    left: 1105px;
+}
+
+#semDescription{
+  position: absolute;
+      top: 487px;
+      left: 1100px;
+      height: 93px;
+      height: 210px;
+      width: 210px;
+}
+
+#semDesAldatzen{
+  position: absolute;
+   top: 700px;
+   left: 1170px;
+}
+#aukeratuPubli{
+  position: absolute;
+    top: 460px;
+    left: 1155px;
+    width: 80px;
+}
+#aldatuPubli{
+  position: absolute;
+    top: 456px;
+    left: 1235px;
+    width: 59px;
+}
+
+#publication-semaphore{
+  margin-top: -410px;
+    height: 100px;
+    width: 90px;
+    left: 600px;
+}
+
+#publication-description{
+  position: relative;
+    top: 32px;
+left: 545px;
+height: 210px;
+width: 210px;
+font-family: cursive;
+font-size: 9px;
+overflow: auto;
+}

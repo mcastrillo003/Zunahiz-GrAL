@@ -1,0 +1,82 @@
+/*kontu kudeaketa*/
+#sign-out-icon{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+#profil-photo{
+  float: left;
+    cursor: pointer;
+    position: absolute;
+    top: 75px;
+    right: 42px;
+    max-width: 80px;
+    min-width: 80px;
+    max-height: 55.19px;
+    min-height: 55.19px;
+}
+
+#profile-name{
+  color: white;
+    position: absolute;
+    cursor: pointer;
+    top: 21%;
+    right: 43px;
+    width: 80px;
+    text-align: center;
+}
+
+#user-prof-box{
+  margin-left: 1195px;
+    margin-top: -25px;
+}
+
+#ezabatu{
+  margin-top: 50px;
+  margin-left: 535px;
+}
+#ezabagoma{
+  margin-left: -535px;
+    width: 1350px;
+    text-align: center;
+}
+
+#galdera{
+  margin-left: -536px;
+      font-size: 20px;
+      text-align: center;
+}
+#oharra{
+  font-size: 28px;
+margin-left: -534px;
+width: 1350px;
+text-align: center;
+
+}
+
+#botoiak{
+  margin-top: 30px;
+    margin-left: -534px;
+    width: 1350px;
+    text-align: center;
+}
+
+#botoia1{
+  margin-right: 25px;
+}
+
+.ui.inverted.red.basic.button, .ui.inverted.red.basic.buttons .button, .ui.inverted.red.buttons .basic.button {
+    background-color: transparent;
+    box-shadow: 0 0 0 2px #e81616 inset!important;
+    color: #e81616!important;
+}
+
+
+footer{
+  background: #004B8D;
+  margin-top: 117px;
+  height: 60px;
+  /*position: fixed;*/
+}

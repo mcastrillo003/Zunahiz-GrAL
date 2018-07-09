@@ -1,0 +1,19 @@
+<header id="header">
+  <a [routerLink]="['/main-page']" (click)="location.reload(false)">
+    <img src="../../assets/images/liburua.png" id="logo" />
+  </a>
+
+  <div class="title-subtitle">
+    <a [routerLink]="['/main-page']">
+      <h1>{{title}}</h1>
+    </a>
+    <p>{{description}}</p>
+  </div>
+
+  <div clas="clearfix"></div>
+
+</header>
+
+<body>
+  <router-outlet></router-outlet>
+</body>

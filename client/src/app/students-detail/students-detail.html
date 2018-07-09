@@ -1,0 +1,62 @@
+<div id="profileraSarrera">
+<i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+<div id="user-prof-box" >
+    <div class="item">
+      <div class="content">
+        <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+        <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+      </div>
+    </div>
+</div>
+</div>
+
+<button id="sortu" class="ui large color3 button" [routerLink]="['/register']">Ikaslea sortu</button>
+<div *ngIf="bist" class="ui cards">
+  <div id="fitx" *ngIf="bist">
+    <div class="ui card">
+      <div class="image">
+        <img src="{{apiUrl+userDisplay.argazkia.picture}}">
+      </div>
+      <div class="content">
+        <p class="header">{{userDisplay.firstName}} {{userDisplay.lastName}} {{userDisplay.lastName2}}</p>
+        <div class="meta">
+          <span class="date">{{userDisplay.username}}</span>
+        </div>
+        <div class="description">
+          {{userDisplay.description}}
+        </div>
+      </div>
+      <div class="extra content">
+        <a [routerLink]="['/profile',userDisplay._id]">Perfilera joan</a>
+        <a id="ezabatu" [routerLink]="['/delete-user',userDisplay._id]">Kontua ezabatu</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--ESTATISTIKA ATALA-->
+<div id="estatistika" *ngIf="estatistika" class="ui card" >
+    <p class="izenburua">IKASLE HONEK GUZTIRA EGIN DITUEN ARGITALPEN KOPURUA: {{argitalpenKop}}</p>
+    <div class="content">
+      <div class="gorria">SEMAFORO GORRIDUNAK: {{gorriKop}}</div>
+    </div>
+    <div class="content">
+      <div class="horia">SEMAFORO HORIDUNAK: {{horiKop}}</div>
+    </div>
+    <div class="content">
+      <div class="berdea">SEMAFORO BERDEDUNAK: {{berdeKop}}</div>
+    </div>
+    <div class="content">
+      <div class="grisa">ORAINDIK EBALUATU GABEAK: {{grisKop}}</div>
+    </div>
+</div>
+
+<ul id="students-list">
+  <li id="ikaslea" (click)=bistaratu(s) *ngFor="let s of users">
+    <div class="ui card" >
+        <div class="content">
+          <div class="header">{{s.firstName}} {{s.lastName}} {{s.lastName2}}</div>
+        </div>
+      </div>
+  </li>
+</ul>

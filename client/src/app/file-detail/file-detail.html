@@ -1,0 +1,12 @@
+<div id="profileraSarrera">
+<i id="sign-out-icon" class="sign out red large icon" (click)="logout()"></i>
+<div id="user-prof-box" >
+    <div class="item">
+      <div class="content">
+        <div id="profile-name" class="ui sub header" [routerLink]="['/profile',userMe._id]">{{userMe.firstName}}</div>
+        <img id="profil-photo" class="ui tiny circular image" src="{{apiUrl+image.picture}}" [routerLink]="['/profile',userMe._id]">
+      </div>
+    </div>
+</div>
+
+<iframe id="edukia" width="400" height="400" [src]="url" download="file.name"></iframe>

@@ -1,0 +1,53 @@
+/*Footer*/
+#BodyIndex{
+  height: 500px;
+}
+
+footer {
+    background: #80aaff;
+    margin-top: 58px;
+    height: 60px;
+}
+
+
+#user-filter-box{
+  margin-bottom: 20px;
+  margin-top: 80px;
+  margin-left: 520px;
+  align:center;
+}
+
+#Title-user{
+  padding-left: 100px;
+  margin-left: -380px;
+  font: oblique bold 200% cursive;
+  z-index: 5;
+  position: absolute;
+}
+
+#label-user{
+  margin: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 120%;
+  color: #7b7f76;
+}
+
+#Subtitle-user{
+  margin: 5px;
+  margin-left: 130px;
+  margin-top:-40px;
+  margin-bottom: 50px;
+  font-size: 120%;
+  cursor:pointer;
+  text-decoration: underline gray;
+}
+
+#create-user-button{
+  margin-left: 40px;
+  margin-bottom: 60px;
+  background-color: #666666;
+  color: black;
+  margin-left: 110px;
+  cursor:pointer;
+}
